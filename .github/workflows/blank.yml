@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cryptix</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: black;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Courier New', monospace;
+            position: relative;
+        }
+        
+        /* Фальшивка Base64 — еле заметна */
+        .fake-message {
+            color: #0f0f0f;  /* Почти чёрный, едва видно */
+            font-size: 18px;
+            text-align: center;
+            max-width: 600px;
+            line-height: 1.5;
+            margin: 20px;
+            word-break: break-word;
+        }
+        
+        /* Настоящий ключ — абсолютно невидим */
+        .hidden-key {
+            color: #010101;  /* Чёрный на чёрном */
+            font-size: 48px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 50px;
+            user-select: none;
+            opacity: 0;  /* Для верности */
+        }
+        
+        /* Специально для особо внимательных */
+        .hint {
+            color: #010101;
+            font-size: 12px;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Фальшивка Base64 (расшифровывается как "смотри в картинку") -->
+    <div class="fake-message">
+        LBH NER YBBXVAT VA GUR JEBAT CYNWR. PURPX GUR CVPGHER.
+    </div>
+    
+    <!-- Настоящий ключ. Его не видно, но он здесь. -->
+    <div class="hidden-key">
+        STONE
+    </div>
+    
+    <!-- Ещё один скрытый слой (опционально) -->
+    <div class="hint">
+        maybe you should look closer
+    </div>
+
+    <!-- Для тех, кто откроет консоль -->
+    <script>
+        console.log("🔍 Something hidden in the dark...");
+        console.log("Try adjusting your screen brightness.");
+    </script>
+</body>
+</html>
